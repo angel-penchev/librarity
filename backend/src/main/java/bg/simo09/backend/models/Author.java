@@ -1,9 +1,10 @@
-package bg.simo09.backend;
+package bg.simo09.backend.models;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "authors")
 public class Author {
 
     @Id
@@ -11,13 +12,13 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @Column(name = "first_name")
+    @Column(name = "author_first_name")
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "author_last_name")
     private String lastName;
 
-    @ManyToMany(mappedBy = "bookAuthors")
+    @ManyToMany(mappedBy = "authors")
     private Set<Book> books;
 
     public String getFirstName() {
@@ -42,10 +43,5 @@ public class Author {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
-    }
-
-    @Override
-    public String toString() {
-        return firstName+" "+lastName;
     }
 }
