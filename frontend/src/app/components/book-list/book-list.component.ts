@@ -12,7 +12,10 @@ export class BookListComponent implements OnInit {
   constructor(private bookListService: BookListService)  { }
 
   ngOnInit() {
-    this.books = [
+    this.bookListService.getBooks().subscribe(books => {
+      this.books = books;
+    });
+    /*this.books = [
       {
         "title": "Java for dum dums",
         authors: [
@@ -67,7 +70,7 @@ export class BookListComponent implements OnInit {
           }
         }
       }
-    ]
+    ]*/
   }
 
 }

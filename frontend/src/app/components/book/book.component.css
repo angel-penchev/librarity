@@ -1,6 +1,7 @@
 .book-item {
     display: inline-block;
-    height: 10em;
+    width: 15em;
+    height: auto;
     padding: 1em;
     margin: 1em;
     color: rgb(255, 255, 255);
