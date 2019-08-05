@@ -2,10 +2,10 @@ INSERT INTO authors (author_first_name,author_last_name) VALUES ( 'John','Advent
 INSERT INTO authors (author_first_name,author_last_name) VALUES ( 'Bob','Scienceful' );
 INSERT INTO authors (author_first_name,author_last_name) VALUES ( 'Helen','Fantasylan' );
 
-INSERT INTO books (book_title) VALUES ( 'Adventures of Johnny' );
-INSERT INTO books (book_title) VALUES ( 'Science of the Earth' );
-INSERT INTO books (book_title) VALUES ( 'Adventures in Fantazaria' );
-INSERT INTO books (book_title) VALUES ( 'Science Adventure' );
+INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Adventures of Johnny', 'The adventures of kid named Johnny in the steel ball universe', 10.0 );
+INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Science of the Earth', 'Archeology encyclopedia', 4.2 );
+INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Adventures in Fantazaria', 'Chronicles of Narnaia but with different characters', 6.9 );
+INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Science Adventure','Dr. Stone rip-off',8.0 );
 
 INSERT INTO genres (genre_name) VALUES ( 'Adventure' );
 INSERT INTO genres (genre_name) VALUES ( 'Science' );

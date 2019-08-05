@@ -15,6 +15,12 @@ public class Book {
     @Column(name = "book_title")
     private String title;
 
+    @Column(name = "book_desc")
+    private String description;
+
+    @Column(name = "book_rating")
+    private float rating;
+
     @ManyToMany
     @JoinTable(
             name = "book_authors",
@@ -37,6 +43,22 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 
     public Set<Author> getAuthors() {
