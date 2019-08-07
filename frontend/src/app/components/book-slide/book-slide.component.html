@@ -9,13 +9,12 @@
             <div class="book-rating">
                 <p>{{ book.rating.toFixed(1) }}</p>
             </div>
-            <a class="book-open-btn" href="#" class="book-open-btn">Read</a>
+            <a class="book-open-btn" [routerLink]="['/books', book.title]" class="book-open-btn">Read</a>
         </div>
     </div>
     <div class="right-section">
-        <img class="book-cover" id="book-cover"
-            src="assets/demo-cover.jpg"
-            alt=""
-            width="80px">
+        <div class="book-cover" id="book-cover">
+            <img src="assets/demo-cover.jpg" alt="" width="80px">
+        </div>
     </div>
 </div>

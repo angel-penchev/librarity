@@ -8,6 +8,10 @@ header {
     position: fixed;
     padding: 1em;
     z-index: 10;
-    margin: auto;
-    
+    margin: auto;    
+}
+
+.header-fix {
+    height: 4em;
+    width: 100%;
 }

@@ -1,7 +1,6 @@
 .book-showcase {
     display: block;
     overflow: hidden;
-    padding-top: 4em;
 }
 
 app-book-slide {

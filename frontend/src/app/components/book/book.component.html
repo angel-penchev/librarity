@@ -9,6 +9,6 @@
             <div class="book-rating">
                 <p>{{ book.rating.toFixed(1) }}</p>
             </div>
-            <a class="book-open-btn" href="#" class="book-open-btn">Read</a>
+            <a class="book-open-btn" [routerLink]="['/books', book.title]" class="book-open-btn">Read</a>
     </div>
 </div>
