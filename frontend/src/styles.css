@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
   

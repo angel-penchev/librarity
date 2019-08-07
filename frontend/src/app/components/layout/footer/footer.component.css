@@ -1,0 +1,18 @@
+footer {
+    color: #fff;
+    font-size: 0.8em;
+    background: #363a3c;
+    height: 4em;
+    padding: 1em;
+    margin: 0px auto;
+}
+
+.links, .legal {
+    width: fit-content;
+    margin: 0px auto;
+}
+
+.links a {
+    color: #fff;
+    margin: 0.25em 0.25em;
+}

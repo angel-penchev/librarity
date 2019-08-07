@@ -1,0 +1,21 @@
+<div class="book-slide" id="book-slide">
+    <div class="left-section">
+        <div class="book-information">
+            <h2 class="book-title">{{ book.title }}</h2>
+            <p class="book-authors" *ngIf="book.authorsNames">{{ book.authorsNames }}</p>
+            <div class="book-tags" *ngFor="let genre of book.genresNames, let i = index" [attr.data-index]="i">
+                <p>{{ book.genresNames[i] }}</p>
+            </div>
+            <div class="book-rating">
+                <p>{{ book.rating.toFixed(1) }}</p>
+            </div>
+            <a class="book-open-btn" href="#" class="book-open-btn">Read</a>
+        </div>
+    </div>
+    <div class="right-section">
+        <img class="book-cover" id="book-cover"
+            src="assets/demo-cover.jpg"
+            alt=""
+            width="80px">
+    </div>
+</div>

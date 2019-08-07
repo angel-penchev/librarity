@@ -1,5 +1,4 @@
-<app-book
-    *ngFor="let book of books"
-    [book]=book
->
-</app-book>
+<section class="book-list">
+    <app-book class="book-item" *ngFor="let book of books" [book]=book>
+    </app-book>
+</section>

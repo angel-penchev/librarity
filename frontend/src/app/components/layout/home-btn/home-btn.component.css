@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+.logo {
+    font-size: 1.6em;
+    font-family: 'Dancing Script', cursive;
+}
+
+a {
+    transition-duration: 0.4s;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    transition-duration: 0.4s;
+    size: 1.8em;
+}

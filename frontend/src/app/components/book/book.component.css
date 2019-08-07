@@ -1,9 +1,47 @@
 .book-item {
     display: inline-block;
-    width: 15em;
-    height: auto;
-    padding: 1em;
+    box-sizing: border-box;
+    width: calc(100% - 2em); /*TODO: Find a better way*/
+    height: calc(100% - 2em);
     margin: 1em;
+    padding: 1em;
     color: rgb(255, 255, 255);
     background-color: rgb(25, 25, 25);
+}
+
+.wrapper {
+    margin: 0px auto;
+}
+
+.book-cover {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.book-title {
+    color: #fff;
+    font-size: 1em;
+}
+
+.book-authors {
+    color: #ecf0f196;
+    font-size: 0.8em;
+}
+
+.book-tags {
+    display: inline-flex;
+    padding: 0.25em;
+    margin-right: 0.5em;
+    color: #ecf0f196;
+    background-color: #582e69;
+    border-radius: 0.35em;
+    font-size: 0.8em;
+}
+
+.book-rating {
+    display: inline;
+}
+
+.book-open-btn {
+    display: inline;
 }

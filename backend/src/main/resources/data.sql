@@ -6,23 +6,32 @@ INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Adventures of J
 INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Science of the Earth', 'Archeology encyclopedia', 4.2 );
 INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Adventures in Fantazaria', 'Chronicles of Narnaia but with different characters', 6.9 );
 INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Science Adventure','Dr. Stone rip-off',8.0 );
+INSERT INTO books (book_title, book_desc, book_rating) VALUES ( 'Under Siege','The book based on R6',6.0 );
 
 INSERT INTO genres (genre_name) VALUES ( 'Adventure' );
 INSERT INTO genres (genre_name) VALUES ( 'Science' );
 INSERT INTO genres (genre_name) VALUES ( 'Fantasy' );
+INSERT INTO genres (genre_name) VALUES ( 'New' );
+INSERT INTO genres (genre_name) VALUES ( 'Trending' );
 
 
 INSERT INTO book_genres (book_id,genre_id) VALUES ( 1,1 );
+INSERT INTO book_genres (book_id,genre_id) VALUES ( 1,4 );
 INSERT INTO book_genres (book_id,genre_id) VALUES ( 2,2 );
 INSERT INTO book_genres (book_id,genre_id) VALUES ( 3,1 );
 INSERT INTO book_genres (book_id,genre_id) VALUES ( 3,3 );
 INSERT INTO book_genres (book_id,genre_id) VALUES ( 4,1 );
 INSERT INTO book_genres (book_id,genre_id) VALUES ( 4,2 );
+INSERT INTO book_genres (book_id,genre_id) VALUES ( 4,5 );
+INSERT INTO book_genres (book_id,genre_id) VALUES ( 5,1 );
+INSERT INTO book_genres (book_id,genre_id) VALUES ( 5,3 );
 
 
 INSERT INTO book_authors (book_id,author_id) VALUES ( 1,1 );
 INSERT INTO book_authors (book_id,author_id) VALUES ( 2,2 );
 INSERT INTO book_authors (book_id,author_id) VALUES ( 3,2 );
 INSERT INTO book_authors (book_id,author_id) VALUES ( 3,3 );
+INSERT INTO book_authors (book_id,author_id) VALUES ( 4,2 );
+INSERT INTO book_authors (book_id,author_id) VALUES ( 5,2 );
 
 

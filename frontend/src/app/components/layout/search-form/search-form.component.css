@@ -1,0 +1,40 @@
+form {
+  background: #95a5a6;
+  height: 1.6em;
+  border-radius: 1.6em;
+  padding: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[name="search-query"] {
+  transition-duration: 0.6s;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  transition: 4ms;
+  width: 0;
+}
+
+form:hover > input[name="search-query"] {
+  transition-duration: 1s;
+  width: 100%;
+}
+
+input[name="search-btn"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 1.6em;
+  height: 1.6em;
+  border: none;
+  border-radius: 50%;
+  color: #2c3e50;
+  background: none; 
+}
