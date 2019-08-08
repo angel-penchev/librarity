@@ -1,6 +1,4 @@
 import { Component, OnInit, AfterContentInit, Input } from '@angular/core';
-import { StringDecoder } from 'string_decoder';
-
 @Component({
   selector: 'app-book-slide',
   templateUrl: './book-slide.component.html',
@@ -16,8 +14,8 @@ export class BookSlideComponent implements OnInit {
   
 
   async ngAfterContentInit() {
-    await this.sleep(300); // TODO: Find a more effitient way
-    document.getElementById('book-slide').style.backgroundColor = String(this.getAverageColourAsRGB(document.getElementById('book-cover')));
+    //await this.sleep(300); // TODO: Find a more effitient way
+    //document.getElementById('book-slide').style.backgroundColor = String(this.getAverageColourAsRGB(document.getElementById('book-cover')));
   }
 
   sleep(ms) {

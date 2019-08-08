@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/* Variables */
+:root {
+  --primary-gradient: linear-gradient(to right, #f1c40f, #f39c12);
+  --secondary-gradient: linear-gradient(135deg, #283593, #5C6BC0);
+  --text-color: #f7f9f9;
+  --Montserrat: "Montserrat", cursive;
+  --Lobster: "Lobster", cursive;
+  --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+  --border-color: rgba(0, 0, 0, 0.329);
+}
 
 * {
   box-sizing: border-box;
@@ -6,12 +17,26 @@
   padding: 0;
 }
 
-body {
-  font-family: Montserrat;
+html, body {
+  font-family: var(--Montserrat);
   line-height: 1.4;
+  min-height: 100%;
+  background: var(--secondary-gradient);
 }
 
 a {
   text-decoration: none;
 }
-  
+
+::-webkit-scrollbar {
+  width: 2px; /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.8);
+}

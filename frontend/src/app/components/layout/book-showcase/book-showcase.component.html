@@ -1,7 +1,6 @@
 <section class="book-showcase">
-    <figure>
+    <owl-carousel [options]="mySlideOptions" [items]="books" [carouselClasses]="['owl-theme', 'sliding']" >
         <app-book-slide *ngFor="let book of books" [book]=book>
         </app-book-slide>
-    </figure>
-    
+    </owl-carousel> 
 </section>

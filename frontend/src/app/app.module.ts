@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OwlModule } from 'ngx-owl-carousel';
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './components/book/book.component';
@@ -52,7 +53,9 @@ import { ContactComponent } from './components/pages/contact/contact.component';
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
       { path: '**', component: NotFoundComponent }
-    ])
+    ]),
+    FontAwesomeModule,
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

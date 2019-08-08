@@ -7,6 +7,7 @@
                 <p>{{ book.genresNames[i] }}</p>
             </div>
             <div class="book-rating">
+                <i class="fas fa-star"></i> 
                 <p>{{ book.rating.toFixed(1) }}</p>
             </div>
             <a class="book-open-btn" [routerLink]="['/books', book.title]" class="book-open-btn">Read</a>
@@ -14,7 +15,7 @@
     </div>
     <div class="right-section">
         <div class="book-cover" id="book-cover">
-            <img src="assets/demo-cover.jpg" alt="" width="80px">
+            <img src="assets/img/demo-cover.jpg" alt="" width="80px">
         </div>
     </div>
 </div>
