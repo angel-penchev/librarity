@@ -23,19 +23,27 @@ public class Book {
 
     @ManyToMany
     @JoinTable(
-            name = "book_authors",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "author_id")
+        name = "book_authors",
+        joinColumns = @JoinColumn(name = "book_id"),
+        inverseJoinColumns = @JoinColumn(name = "author_id")
     )
     private Set<Author> authors;
 
     @ManyToMany
     @JoinTable(
-            name = "book_genres",
+            name = "book_tags",
             joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "genre_id")
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
-    private Set<Genre> genres;
+    private Set<Tag> tags;
+
+    public long getID() {
+        return id;
+    }
+
+    public void setID(long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -53,14 +61,6 @@ public class Book {
         this.description = description;
     }
 
-    public float getRating() {
-        return rating;
-    }
-
-    public void setRating(float rating) {
-        this.rating = rating;
-    }
-
     public Set<Author> getAuthors() {
         return authors;
     }
@@ -69,11 +69,19 @@ public class Book {
         this.authors = authors;
     }
 
-    public Set<Genre> getGenres() {
-        return genres;
+    public Set<Tag> getTags() {
+        return tags;
     }
 
-    public void setGenres(Set<Genre> genres) {
-        this.genres = genres;
+    public void setTags(Set<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 }

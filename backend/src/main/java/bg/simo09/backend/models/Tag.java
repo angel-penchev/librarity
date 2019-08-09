@@ -6,18 +6,18 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "genres")
-public class Genre {
+@Table(name = "tags")
+public class Tag {
 
     @Id
-    @Column(name = "genre_id")
+    @Column(name = "tag_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @Column(name = "genre_name")
+    @Column(name = "tag_name")
     String name;
 
-    @ManyToMany(mappedBy = "genres")
+    @ManyToMany(mappedBy = "tags")
     Set<Book> books;
 
     public String getName() {
