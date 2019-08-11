@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OwlModule } from 'ngx-owl-carousel';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './components/book/book.component';
@@ -22,6 +23,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { BookContentComponent } from './components/pages/book-content/book-content.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { BookPreviewComponent } from './components/layout/book-preview/book-preview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     BookContentComponent,
     AboutComponent,
     ContactComponent,
+    BookPreviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,8 +58,10 @@ import { ContactComponent } from './components/pages/contact/contact.component';
       { path: '**', component: NotFoundComponent }
     ]),
     FontAwesomeModule,
-    OwlModule
+    OwlModule,
+    NgbModule
   ],
+  entryComponents: [ BookPreviewComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

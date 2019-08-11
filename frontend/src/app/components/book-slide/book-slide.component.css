@@ -1,21 +1,21 @@
 .book-slide {
-    background-color: rgb(25, 25, 25);
-    height: 25em;
+    display: grid;
+    grid-template-columns: 60% 40%;
 }
-
-.left-section {
+@media(max-width: 576px) {
+    .book-slide {
+        display: grid;
+        height: auto;
+        grid-template-columns: 100%;
+    }
+    
+}
+.left-section .right-section{
     display: inline-block;
     vertical-align: top;
-    width: 60%;
     height: 100%;
 }
 
-.right-section {
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
-    height: 100%;
-}
 
 .left-section .book-information, .right-section .book-cover {
     position: relative;
@@ -43,13 +43,19 @@
 }
 
 .book-title {
+    width: fit-content;
+    margin: 0px auto;
+    text-align: center;
     color: #fff;
-    font-size: 1em;
+    font-size: 3em;
 }
 
 .book-authors {
+    text-align: center;
+    width: fit-content;
+    margin: 0px auto;
     color: #ecf0f196;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .book-tags {
@@ -62,11 +68,21 @@
     font-size: 0.8em;
 }
 
-.book-rating {
-    display: inline;
-    color: #fff;
+.book-description {
+    width: fit-content;
+    text-align: center;
+    margin: 0px auto;
+    color: #ecf0f196;
+    font-size: 1em;
 }
 
 .book-open-btn {
-    display: inline;
+    width: fit-content;
+    margin: 0.5em auto;
+}
+
+.book-cover img {
+    width: 12.5rem;
+    border: #fff 0.25em solid;
+    
 }

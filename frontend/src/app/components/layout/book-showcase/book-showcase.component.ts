@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BookListService } from 'src/app/services/book-list.service'
 import { BookItem, BooksRequest } from 'src/app/models/book/book.module';
 import { Observable } from 'rxjs';
-declare var $: any;
 
 @Component({
   selector: 'app-book-showcase',
@@ -14,11 +13,11 @@ export class BookShowcaseComponent implements OnInit {
   mySlideOptions = {
     loop: true,
     autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: false,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
     items: 1,
     dots: true,
-    nav: true
+    nav: false
   };
 
   constructor(private bookListService: BookListService) { }
@@ -27,7 +26,7 @@ export class BookShowcaseComponent implements OnInit {
     let booksObservable: Observable<BooksRequest> = this.bookListService.getBooks();
     booksObservable.subscribe(data => {
       this.books = data["_embedded"].books.filter(function (books) {
-        return books.genresNames.includes("New") || books.genresNames.includes("Trending");
+        return books.tags.includes("New") || books.tags.includes("Trending");
       }
       );
     })

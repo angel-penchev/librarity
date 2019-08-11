@@ -1,21 +1,15 @@
 <div class="book-slide" id="book-slide">
     <div class="left-section">
         <div class="book-information">
+            <p class="book-authors" *ngIf="book.authors">{{ book.authors }}</p>
             <h2 class="book-title">{{ book.title }}</h2>
-            <p class="book-authors" *ngIf="book.authorsNames">{{ book.authorsNames }}</p>
-            <div class="book-tags" *ngFor="let genre of book.genresNames, let i = index" [attr.data-index]="i">
-                <p>{{ book.genresNames[i] }}</p>
-            </div>
-            <div class="book-rating">
-                <i class="fas fa-star"></i> 
-                <p>{{ book.rating.toFixed(1) }}</p>
-            </div>
-            <a class="book-open-btn" [routerLink]="['/books', book.title]" class="book-open-btn">Read</a>
+            <p class="book-description">{{ book.description }}</p>
+            <button class="btn book-open-btn" (click)="openPreview()">Read</button>
         </div>
     </div>
     <div class="right-section">
         <div class="book-cover" id="book-cover">
-            <img src="assets/img/demo-cover.jpg" alt="" width="80px">
+            <img src="assets/img/demo-cover.jpg" alt="">
         </div>
     </div>
 </div>

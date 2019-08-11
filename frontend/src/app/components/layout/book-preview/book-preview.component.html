@@ -1,0 +1,25 @@
+<div class="modal-body">
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="book-cover" id="book-cover">
+        <img src="assets/img/demo-cover.jpg" alt="">
+    </div>
+    <div class="book-information">
+        <div class="book-information">
+            <p class="book-authors">{{ book.authors }}</p>
+            <h2 class="book-title">{{ book.title }}</h2>
+            <p class="book-description">{{ book.description }}</p>
+
+            <div class="book-tags" *ngFor="let genre of book.tags, let i = index" [attr.data-index]="i">
+                <p>{{ book.tags[i] }}</p>
+            </div>
+            <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <p>{{ book.rating.toFixed(1) }}</p>
+            </div>
+            <a class="btn book-open-btn" [routerLink]="['/books', book.id, 1]" (click)="activeModal.dismiss()">Start
+                Reading</a>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,7 @@
-import { Component, OnInit, AfterContentInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { BookPreviewComponent } from 'src/app/components/layout/book-preview/book-preview.component';
+
 @Component({
   selector: 'app-book-slide',
   templateUrl: './book-slide.component.html',
@@ -6,13 +9,17 @@ import { Component, OnInit, AfterContentInit, Input } from '@angular/core';
 })
 export class BookSlideComponent implements OnInit {
   @Input() book: BookSlideComponent;
-  constructor() { }
+  
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
+  openPreview() {
+    const modalRef = this.modalService.open(BookPreviewComponent);
+    modalRef.componentInstance.book = this.book;
+  }
   
-
   async ngAfterContentInit() {
     //await this.sleep(300); // TODO: Find a more effitient way
     //document.getElementById('book-slide').style.backgroundColor = String(this.getAverageColourAsRGB(document.getElementById('book-cover')));

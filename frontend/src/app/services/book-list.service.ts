@@ -15,7 +15,7 @@ const httpOptions = {
 })
 
 export class BookListService {
-  bookListURL: string = "http://127.0.0.1:8080/books"
+  bookListURL: string = "http://192.168.1.3:8080/books"
   books: BooksRequest;
   constructor(private http:HttpClient) { }
 

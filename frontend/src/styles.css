@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
 /* Variables */
 :root {
-  --primary-gradient: linear-gradient(to right, #f1c40f, #f39c12);
-  --secondary-gradient: linear-gradient(135deg, #283593, #5C6BC0);
+  --primary-gradient: linear-gradient(135deg, #f44336, #d32f2f);
+  --secondary-gradient: linear-gradient(to right, #3949ab, #283593);
+  --generic-gradient: linear-gradient(135deg, #191919, #202020);
   --text-color: #f7f9f9;
   --Montserrat: "Montserrat", cursive;
   --Lobster: "Lobster", cursive;
-  --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+  --normal-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+  --hover-shadow: 4px 5px 8px rgba(27, 27, 27, 0.712);
   --border-color: rgba(0, 0, 0, 0.329);
 }
 
@@ -17,15 +20,37 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-family: var(--Montserrat);
   line-height: 1.4;
   min-height: 100%;
-  background: var(--secondary-gradient);
+  /* background: var(--secondary-gradient); */
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+}
+
+.btn {
+  transition: ease-out;
+  transition-duration: 0.2s;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4rem;
+  background: #2b5876;
+  color: whitesmoke;
+  font-size: 0.7rem;
+  font-family: var(--Montserrat);
+  box-shadow: var(--normal-shadow);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: ease-in;
+  transition-duration: 0.2s;
+  box-shadow: var(--hover-shadow);
 }
 
 ::-webkit-scrollbar {
@@ -39,4 +64,18 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.8);
+}
+
+.owl-dots button span {
+  background: var(--text-color) !important;
+}
+
+.owl-dots .active span {
+  background: #ffd765 !important;
+}
+
+.modal-dialog {
+  max-width: 80% !important;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { logging } from 'protractor';
 
 
 
@@ -36,10 +37,11 @@ export class BooksRequest {
 }
 
 export class BookItem {
+  id: number;
   title: string;
   description: string;
-  authorsNames: string[];
-  genresNames: string[];
+  authors: string[];
+  tags: string[];
   rating: number;
   _links: {
     self: {

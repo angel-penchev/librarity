@@ -2,13 +2,13 @@
     <div class="wrapper">
             <img class="book-cover" src="https://biblioman.chitanka.info/thumb/covers/0/6/4/8/10648-5d4592eae835a.150.jpg/%D0%A1%D0%BA%D0%B8%D1%82%D0%BD%D0%B8%D0%BA%D1%8A%D1%82%D1%8A_%D0%B5%D0%B2%D1%80%D0%B5%D0%B8%D0%BD%D1%8A-front-150px.jpg" />
             <h2 class="book-title">{{ book.title }}</h2>
-            <p class="book-authors" *ngIf="book.authorsNames">{{ book.authorsNames }}</p>
-            <div class="book-tags" *ngFor="let genre of book.genresNames, let i = index" [attr.data-index]="i">
-                <p>{{ book.genresNames[i] }}</p>
+            <p class="book-authors" *ngIf="book.authors">{{ book.authors }}</p>
+            <div class="book-tags" *ngFor="let genre of book.tags, let i = index" [attr.data-index]="i">
+                <p>{{ book.tags[i] }}</p>
             </div>
             <div class="book-rating">
                 <p>{{ book.rating.toFixed(1) }}</p>
             </div>
-            <a class="book-open-btn" [routerLink]="['/books', book.title]" class="book-open-btn">Read</a>
+            <a class="book-open-btn" (click)="openPreview()" class="book-open-btn">Read</a>
     </div>
 </div>

@@ -6,7 +6,8 @@
     margin: 1em;
     padding: 1em;
     color: rgb(255, 255, 255);
-    background-color: rgb(25, 25, 25);
+    background: var(--secondary-gradient);
+    border-radius: 1em;
 }
 
 .wrapper {
