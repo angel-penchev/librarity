@@ -7,15 +7,15 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { BookComponent } from './components/book/book.component';
-import { BookListComponent } from './components/book-list/book-list.component';
+import { BookItemComponent } from './components/layout/book-item/book-item.component';
+import { BookListComponent } from './components/layout/book-list/book-list.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { BookShowcaseComponent } from './components/layout/book-showcase/book-showcase.component';
 import { SearchFormComponent } from './components/layout/search-form/search-form.component';
 import { UserStatusComponent } from './components/layout/user-status/user-status.component';
 import { HomeBtnComponent } from './components/layout/home-btn/home-btn.component';
-import { BookSlideComponent } from './components/book-slide/book-slide.component';
+import { BookSlideComponent } from './components/layout/book-slide/book-slide.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
@@ -27,7 +27,7 @@ import { BookPreviewComponent } from './components/layout/book-preview/book-prev
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
+    BookItemComponent,
     BookListComponent,
     HeaderComponent,
     FooterComponent,

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BookListService } from 'src/app/services/book-list.service'
-import { BookItem, BooksRequest } from 'src/app/models/book/book.module';
+import { RequestBooksService } from 'src/app/services/request-books.service'
+import { BookItem } from 'src/app/models/book-item.module';
 import { Observable } from 'rxjs';
+import { BooksRequest } from 'src/app/models/book-request.module';
 
 @Component({
   selector: 'app-book-showcase',
@@ -20,7 +21,7 @@ export class BookShowcaseComponent implements OnInit {
     nav: false
   };
 
-  constructor(private bookListService: BookListService) { }
+  constructor(private bookListService: RequestBooksService) { }
 
   ngOnInit() {
     let booksObservable: Observable<BooksRequest> = this.bookListService.getBooks();
